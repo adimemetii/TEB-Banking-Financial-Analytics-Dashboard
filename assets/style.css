@@ -347,9 +347,14 @@ header[data-testid="stHeader"] [data-testid="stToolbar"] {
 
 .hero-topline > .app-mark:first-child,
 .app-brand-copy,
-.app-logo-frame,
-.app-logo-frame img {
+.app-logo-frame {
   display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.app-logo-frame img {
+  display: block !important;
   visibility: visible !important;
   opacity: 1 !important;
 }
@@ -364,8 +369,9 @@ header[data-testid="stHeader"] [data-testid="stToolbar"] {
 }
 
 .app-logo-frame {
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex: 0 0 auto;
   border: 1px solid rgba(21, 216, 179, 0.28);
   background: rgba(255, 247, 253, 0.09);
@@ -1002,6 +1008,10 @@ div[data-testid="stAlert"] {
 }
 
 @media (max-width: 620px) {
+  [data-testid="stHorizontalBlock"]:has(.kpi-card) {
+    gap: 16px !important;
+  }
+
   .hero {
     padding: 1.1rem;
     border-radius: 22px;
